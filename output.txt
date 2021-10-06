@@ -1,0 +1,77 @@
+Here are the commands
+f - to finish running the program.
+b - to display on the screen the information about all the books in the library.
+u - to display on the screen the information about all the users.
+i,[title],[userName] - to update the stored data when a book is issued to a user.
+r,[title],[userName] - to update the stored data when a user returns a book to the library.
+
+Please input the command: b
+------------ Books Information ------------
+There are 5 books:
+Finite Transition Systems, Andre Arnold, available
+Java Gently, Judith Bishop, available
+Concurrent Programming, Stephen J. Hartley, available
+Petri Nets, Wolfgang Reisig, available
+Concurrent Programming, C. R. Snow, available
+
+Please input the command: u
+------------ Users Information ------------
+There are 4 users:
+Zoe Brown, holding 0 books
+Anna Smith, holding 0 books
+John Smith, holding 0 books
+John Williams, holding 0 books
+
+Please input the command: i,oncurrent Programming,Anna Smith
+No such book!
+
+Please input the command: i,concurrent Programming,Anna Smith
+No such book!
+
+Please input the command: i,Concurrent Programming,Anna Smith
+Successfully!
+
+Please input the command: i,Java Gently,Anna Smith
+Successfully!
+
+Please input the command: i,Finite Transition Systems,Anna Smith
+Successfully!
+
+Please input the command: i,Finite Transition Systems
+Wrong command format, it should be i,[title],[userName]
+
+Please input the command: i,Petri Nets,Anna Smith
+The user has hold 3 books and cannot issue more!
+
+Please input the command: i,Finite Transition Systems,John Smith
+The book is on loan!
+And the holder has been informed that: [the book was requested by another user and should be returned as soon as possible]
+
+Please input the command: r,Finite Transition Systems,Anna Smith
+Successfully!
+
+Please input the command: i,Finite Transition Systems,John Smith
+Successfully!
+
+Please input the command: b
+------------ Books Information ------------
+There are 5 books:
+Finite Transition Systems, Andre Arnold, on loan by John Smith
+Java Gently, Judith Bishop, on loan by Anna Smith
+Concurrent Programming, Stephen J. Hartley, available
+Petri Nets, Wolfgang Reisig, available
+Concurrent Programming, C. R. Snow, on loan by Anna Smith
+
+Please input the command: u
+------------ Users Information ------------
+There are 4 users:
+Zoe Brown, holding 0 books
+Anna Smith, holding 2 books
+John Smith, holding 1 books
+John Williams, holding 0 books
+
+Please input the command: g
+The command <g> is not exist!
+
+Please input the command: f
+Goodbye.
